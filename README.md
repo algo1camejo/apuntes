@@ -5,6 +5,7 @@
 * [Cómo realizar cambios a la wiki](#cómo-realizar-cambios-a-la-wiki)
     - [Configuración del entorno](#configuración-del-entorno)
     - [Compilación de la wiki](#compilación-de-la-wiki)
+    - [Generar PDF](#generar-pdf)
 
 ## Cómo contribuir
 
@@ -31,6 +32,7 @@ En este [enlace](https://github.com/firstcontributions/first-contributions/blob/
 
 Se recomienda crear un entorno virtual para aislar los paquetes externos. Para esto, si aún no se hizo, instalar virtualenv y crear el entorno. Para distribuciones basadas en Debian (Ubuntu, Linux Mint, etc.) se puede hacer de la siguiente forma:
 ```bash
+sudo apt update
 sudo apt install python3-venv
 python3 -m venv .venv
 ```
@@ -51,3 +53,18 @@ Para visualizar los cambios realizados se debe compilar la wiki, para hacerlo si
 make html
 ```
 Una vez compilado, el archivo de inicio se encuentra en `_build/html/index.html` y se puede abrir con el navegador.
+
+### Generar PDF
+
+Si se quiere generar un PDF, primero hay que asegurarse de tener todas las dependencias instaladas:
+```bash
+sudo apt update
+sudo apt install texlive-latex-recommended texlive-fonts-recommended \
+    tex-gyre texlive-latex-extra texlive-lang-cyrillic cm-super cm-super-minimal \
+    texlive-lang-greek texlive-xetex texlive-luatex fonts-freefont-otf texlive-lang-spanish
+```
+Con las dependencias instaladas se puede generar el PDF con el comando:
+```bash
+make latexpdf
+```
+El PDF se encontrará en la carpeta `_build/latex`
