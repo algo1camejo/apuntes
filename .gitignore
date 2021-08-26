@@ -1,0 +1,8 @@
+# Virtualenv
+venv/
+.venv/
+env/
+.env/
+
+# Builds
+src/_build
