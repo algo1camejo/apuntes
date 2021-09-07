@@ -1,0 +1,28 @@
+name: Compilar y desplegar
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.repository == 'algo1camejo/apuntes'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install and Build
+        run: |
+          sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
+          npm install
+          make build
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: _book

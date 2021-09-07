@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "honkit": "^3.6.20"
+  },
+  "dependencies": {
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-collapsible-menu": "^1.0.3",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-heading-anchors": "^1.0.3",
+    "gitbook-plugin-hints": "^1.0.2",
+    "honkit-plugin-highlight-pseudocodigo": "file:scripts/honkit-plugin-highlight-pseudocodigo"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "honkit-plugin-highlight-pseudocodigo",
+  "version": "1.0.0",
+  "engines": {
+    "gitbook": "*"
+  },
+  "description": "Extensión de highlight.js para aceptar pseudocódigo (en español)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuel Bilbao",
+  "license": "MIT"
+}

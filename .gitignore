@@ -1,8 +1,5 @@
-# Virtualenv
-venv/
-.venv/
-env/
-.env/
+# Node
+node_modules/
 
 # Builds
-src/_build
+_book/

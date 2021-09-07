@@ -1,0 +1,6 @@
+.bookignore
+.github
+.gitignore
+package.json
+package-lock.json
+src/glosario.json

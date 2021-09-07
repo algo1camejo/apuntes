@@ -1,0 +1,13 @@
+{
+	"root": "src",
+	"plugins": ["highlight-pseudocodigo",
+				"collapsible-menu",
+				"heading-anchors",
+				"github",
+				"back-to-top-button"],
+	"pluginsConfig": {
+		"github": {
+			"url": "https://github.com/algo1camejo/apuntes"
+		}
+	}
+}
