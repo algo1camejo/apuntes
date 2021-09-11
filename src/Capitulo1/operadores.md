@@ -63,8 +63,24 @@ Operadores:
 - `==` : Igual 
 - `!=` : Diferente
 
+Ejemplos,
+```c
+5 < 5 : false
+5 == 5 : true
+6 > 5 : true
+```
+
 ### Lógicos
 
 - `||` : or
 - `&&` : and
 
+Ejemplos,
+```c
+// Con que alguna de las dos expresiones sea verdadera es suficiente para que || lo sea también.
+((5 > 4):true || (2 == 3):false) : true
+
+// Ambas expresiones deben ser verdaderas para que && también lo sea.
+((5 == 6):false && (8==8):true) : false
+((2 > 1):true && (5 < 10):true) : true
+```

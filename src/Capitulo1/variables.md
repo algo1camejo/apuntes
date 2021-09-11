@@ -37,6 +37,24 @@ En la programación una constante es un conjunto de celdas de memoria que toman 
 
 Un ejemplo de constante podría ser el número PI. También, la cantidad de días de la semana.
 
+```javascript
+// JavaScript
+const CONSTANTE = 50;
+```
+
+```c
+// C, C++
+#define UNA_CONSTANTE 50
+const int OTRA_CONSTANTE = 50;
+``` 
+
+```py
+# python
+CONSTANTE = 50
+```
+
+Notar que en lenguajes como C, C++ y JavaScript para declarar constante se usa cierta palabras reservadas, si se intenta modificar estas, ocurriria un error. Pero en Python, una constante se declara igual que una variable, entonces en lenguajes de este estilo, la importancia está en que se trate como una constante, por más que en el fondo sea una variable.
+
 ## Nombres para Constantes y Variables
 La elección de nombres de las variables y constantes no es tan fácil como parece. A continuación se enumeran algunas reglas a seguir.
 
