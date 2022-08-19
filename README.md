@@ -4,9 +4,8 @@
     - [Avisar de un error](#avisar-de-un-error)
     - [Proponer un cambio](#proponer-un-cambio)
 * [Cómo realizar cambios a la wiki](#cómo-realizar-cambios-a-la-wiki)
-    - [Configuración del entorno](#configuración-del-entorno)
-    - [Compilación de la wiki](#compilación-de-la-wiki)
-    - [Generar PDF](#generar-pdf)
+    - [Instalación del entorno](#instalación-del-entorno)
+    - [Servidor de desarrollo local](#servidor-de-desarrollo-local)
 
 ## Cómo contribuir
 
