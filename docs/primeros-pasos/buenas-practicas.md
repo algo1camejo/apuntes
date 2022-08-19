@@ -1,13 +1,17 @@
+---
+sidebar_position: 6
+---
+
 # Buenas prácticas de programación
 
 ## Nombres Descriptivos
 
 Se recomienda usar nombres descriptivos, tanto para nombrar funciones como variables, ya que le aporta **legibilidad y claridad** al código. Esto se debe principalmente a que, en general, el código siempre va a ser leído por alguien que no lo escribió, por lo tanto, es importante que un tercero pueda entenderlo con facilidad. Ejemplos de estos casos es en trabajos grupales, cuando alguien tiene que revisar el código, o cuando volvemos a leer el código después de un tiempo.
 
-##### Mala Práctica
+**Mala Práctica**
 
-``` C
-#define ELEMENTO ’H’
+```c
+#define ELEMENTO 'H'
 #define MAX 100
 
 bool funcion(int numero) {
@@ -16,7 +20,8 @@ bool funcion(int numero) {
 
 char v[MAX];
 ```
-``` Java
+
+```java
 final char ELEMENTO = 'H';
 final int MAX = 100;
 
@@ -26,7 +31,8 @@ public bool funcion(int numero) {
 
 char v[] = new char[MAX];
 ```
-``` Python
+
+```python
 ELEMENTO = 'H'
 MAX = 100
 
@@ -39,9 +45,9 @@ v = "";
 Los nombres son demasiado **genéricos**. `ELEMENTO` puede ser cualquier elemento de la tabla periódica (principalmente para alguien que no está familiarizado con dichos elementos). Un nombre tan genérico, *no permite determinar correctamente que representa*.
 Lo mismo ocurre con el nombre de la función y del vector. En el caso de la función, se debería identificar la misma con un nombre que indique una **acción atómica**. En el caso de la variable, se podría identificar con el **contenido** que tendrá vector.
 
-##### Buena Práctica
+**Buena Práctica**
 
-```C
+```c
 #define HIDROGENO 'H'
 #define MAX_LEGAJOS 100
 
@@ -51,7 +57,8 @@ bool es_impar(int numero) {
 
 int legajos[MAX_LEGAJOS];
 ```
-``` Java
+
+```java
 final char HIDROGENO = 'H';
 final int MAX_LEGAJOS = 100;
 
@@ -61,7 +68,8 @@ public bool es_impar(int numero) {
 
 char legajos[] = new char[MAX_LEGAJOS];
 ```
-``` Python
+
+```python
 HIDROGENO = 'H'
 MAX_LEGAJOS = 100
 
@@ -73,18 +81,18 @@ legajos = "";
 
 Vale aclarar que es importante que los nombres sean autodescriptivos pero tampoco se debe exagerar en longitud. Por ejemplo, nombrar a la función como `funcion_que_calcula_si_un_numero_es_par` haría que sea una tortura escribirlo cada vez que sea necesario.
 
-#### Reglas para Poner Nombres
+### Reglas para Poner Nombres
 Según el libro Code Clean de Uncle Bob:
 1. **Nombres reveladores**
 Nombrar sin que luego exista la necesidad de realizar aclaraciones en un comentario. Los nombres deben aportar significado a las variables. Un ejemplo de mala práctica seria:
-    ```C
-    int d; // Cantidad de días transcurridos
-    ```
-    Sería mejor nombrar la variable como:
-    ```C
-    int dias_transcurridos;
-    ```
-    El nombre no es muy largo y aporta significado.
+	```c
+	int d; // Cantidad de días transcurridos
+	```
+	Sería mejor nombrar la variable como:
+	```c
+	int dias_transcurridos;
+	```
+	El nombre no es muy largo y aporta significado.
 2. **Evitar la desinformación**
 El nombre de la variable no debe ayudar a la incomprensión del código. Por ejemplo una variable booleana que se llame `verdadero` introduce desinformación dentro del contexto del código fuente. Esto se puede ver más claro viéndolo en código:
     ```C
@@ -118,13 +126,14 @@ Los nombres deben ser autodescriptivos. Los nombres genéricos no reducen la com
 ## Declaración de Variables
 **Se pueden declarar distintas variables de un mismo tipo en una línea**. Es recomendable aplicar esta práctica cuando las variables tienen el mismo uso (por ejemplo, índices de iteración). Puede ser que en el caso de que se declaren variables que no tienen algo en común se entorpezca la lectura del código.
 
-##### Mala Práctica
+**Mala Práctica**
 ```C
 int i, j, numero1, numero2, suma, resta;
 ```
 Se puede observar que, por más que las variables corresponden al
 mismo tipo de dato, no implica que su uso será el mismo.
-##### Buena Práctica
+
+**Buena Práctica**
 ```C
 int i, j;
 int numero1, numero2; 
@@ -136,7 +145,7 @@ En este caso, se agrupan las variables según el rol que cumplen en el código. 
 
 Las constantes y/o literales se deben declarar antes que las funciones. Como convención, sus nombres deben ir en mayúsculas.
 
-##### Mala Práctica
+**Mala Práctica**
 ```C
 int main() {
     ...
@@ -155,7 +164,7 @@ public class Main {
     }
 }
 ```
-##### Buena Práctica
+**Buena Práctica**
 ```C
 const int PI = 3.14;
 const int GRAVEDAD = 9.8;
@@ -179,7 +188,7 @@ public class Main {
 
 Inicializar una variable previo a su uso, evitará que se trabaje con basura, y como consecuencia, se evitarán errores de ejecución o de acceso a una posición no asignada de memoria. Esto es principalmente importante cuando, por ejemplo, se trate de variables que se utilizarán como índices de un vector o matriz, o acumuladores. 
 
-##### Mala Práctica
+**Mala Práctica**
 ```C
 int contador;
 for(int i = 0; i < 10; i++) {
@@ -189,7 +198,7 @@ printf("%i", contador);
 ```
 El operador `++` intentará aumentar en una unidad el valor de la variable `contador`, pero la variable inicialmente no contiene nada que se pueda aumentar, simplemente es basura. Como consecuencia, el resultado de este programa será indefinido.
 
-##### Buena Práctica
+**Buena Práctica**
 ```C
 int contador = 0;
 for(int i = 0; i < 10; i++) {
@@ -245,7 +254,8 @@ Como conclusión, en cualquier caso que se deba tomar una convención, la que se
 ## Variables Globales
 
 El uso de variables globales no es recomendable, ya que al ser parte del entorno global del programa dicha variable se puede modificar en cualquier parte del mismo. A su vez, todo el programa dependería de ella y también dificultaría la lectura del código. 
-##### Mala Práctica
+
+**Mala Práctica**
 ```C
 int resultado ;
 int sumar (int num1 , int num2 ) {
@@ -253,7 +263,7 @@ int sumar (int num1 , int num2 ) {
     return resultado ;
 }
 ```
-##### Buena Práctica
+**Buena Práctica**
 ```C
 int sumar (int num1 , int num2 ) {
     int resultado = num1 + num2 ;
@@ -267,7 +277,7 @@ int sumar (int num1 , int num2 ) {
 
 Cuando se trata del cuerpo de una función o una estructura de control, se debe indentar el mismo. Respecto a estructuras de control, esto aplica aún cuanod la sentencia es una sola (ya que en ese caso, a veces no se suelen usar llaves). Como toda buena práctica, aumenta la legibilidad del código.
 
-##### Mala Práctica
+**Mala Práctica**
 ```C
 int suma = 0;
 while(suma < MAX_PERSONAS) {
@@ -279,7 +289,8 @@ printf (" %d\n" , i);
 ```
 Se puede ver que es difícil saber dónde comienzan las instrucciones para
 la estructura de control, como también la totalidad del código. 
-##### Buena Práctica
+
+**Buena Práctica**
 ```C
 int suma = 0;
 while(suma < MAX_PERSONAS) {
@@ -292,11 +303,12 @@ while(suma < MAX_PERSONAS) {
 
 ## Una instrucción por línea
 Si se escribe la totalidad del programa en una sola línea, el compilador no tendrá problema en compilarlo y ejecutarlo (es decir, tener más de una instrucción en una línea, no traería problemas de compilación o ejecución). Se escribe una instrucción por línea para hacer el seguimiento del código de una manera más sencilla.
-##### Mala Práctica
+
+**Mala Práctica**
 ```C
 for (int i = 0; i < MAX_PERSONAS; i++) { suma = suma + i; j = i + 1; }
 ```
-##### Buena Práctica
+**Buena Práctica**
 ```C
 for (int i = 0; i < MAX_PERSONAS; i++) { 
     suma = suma + i; 
@@ -308,11 +320,11 @@ for (int i = 0; i < MAX_PERSONAS; i++) {
 
 No sólo será más clara la lectura para el programador, sino que también para el compilador.
 
-##### Mala Práctica
+**Mala Práctica**
 ```C
 if(numero < MAX_PERSONAS && opcion == OPCION_SI ) { ... }
 ```
-##### Buena Práctica
+**Buena Práctica**
 ```C
 if((numero < MAX_PERSONAS) && (opcion == OPCION_SI)) { ... }
 ```
@@ -328,9 +340,10 @@ Ya es claro lo que realiza dicha línea de código con tal solo leerlo. El comen
 Modularizar un programa con funciones sencillas no sólo brinda legibilidad al código, sino también ayuda a evitar repetición del mismo. Es decir, que podemos reciclar código.
 
 **Ejemplo** 
+
 Se quiere calcular aproximadamente la cantidad de basura que se tira por día en Hogwarts. Se sabe que en cada habitación de cada casa conviven 3 alumnos, que hay un total de cuatro casas (Gryffindor, Hufflepuff, Ravenclaw y Slytherin) y que cada alumno genera aproximadamente 500 gramos de basura por día. La cantidad de habitaciones serán ingresadas por el usuario.
 
-##### Mala Práctica
+**Mala Práctica**
 
 ```C
 int main() {
@@ -353,7 +366,8 @@ int main() {
 }
 ```
 No solo que no hay uso de constantes, si no que se repite código.
-##### Buena Práctica
+
+**Buena Práctica**
 ```C
 #define GRYF "Gryffindor"
 #define HUFF "Hufflepuff"
@@ -395,12 +409,15 @@ int main() {
 El código se lo dividió en funciones sencillas e incluso más "generales" (por ejemplo, `pedir_cantidad_habitaciones()` se puede usar la misma función para luego escribir distintos textos), se declararon constantes tal como se explicó anteriormente y da lugar a que dichas funciones puedan usarse reiteradas veces dentro del programa.
 
 ## Pre y Post Condiciones
+
 **Precondiciones**: son las condiciones que deben estar dadas para que una función funcione correctamente. En otras palabras, en que estado deben estar los parámetros recibidos.
+
 **Postcondiciones**: las condiciones sobre el estado en que quedan las variables y él o los valores de retorno. En otras palabras, cómo va a ser lo que se devuelve o qué sucede con los parámetros en caso de ser modificados.
 
 Se utlizan para llevar una documentación precisa de cada función (o procedimiento), sin necesidad de aclarar o explicar que hace la misma exactamente. Esto es importante, principalmente en el caso en que se este trabajando con otras personas en un mismo código.
 
-##### Ejemplo
+### Ejemplo
+
 ```C
 /*
  * Precondiciones: la cantidad de estrellas debe ser un número mayor a 0.

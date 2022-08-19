@@ -1,6 +1,10 @@
-## Estructuras de Control
+---
+sidebar_position: 5
+---
 
-### Terminología
+# Estructuras de Control
+
+## Terminología
 
 | Término | Definición |
 | ----------- | ----------- |
@@ -10,7 +14,7 @@
 | **Bloque de código** | Agrupación de acciones o declaraciones. Si el                                 bloque se ejecuta, todas las acciones dentro de él                            también lo harán. |
 | **Expresión booleana** | Expresión que se evalúa como verdadera o falsa |
 
-### Introducción
+## Introducción
 
 Un **programa** tiene un punto de partida, desde ahí, comenzará su ejecución y continuará secuencialmente, una línea a la vez, hasta que se alcance el final del programa. Este es el flujo normal de un programa, **secuencial**. \
 A la hora de programar, vamos a encontrar situaciones en las que debemos, por ejemplo, decidir ir por un camino u otro en base a una situación dada, o ejecutar una instrucción más de una vez. Acá es donde entran las *estructuras de control*. 
@@ -20,7 +24,7 @@ Veremos dos tipos de estructuras de control (además de la secuencial):
 1. **Iterativa**: permiten ejecutar una instrucción más de una vez.
 2. **Selectiva**: permiten tomar decisiones, es decir, realizar una acción u otra/s.
 
-### Estructuras de control selectivas
+## Estructuras de control selectivas
 
 Estas estructuras de control permiten alterar el flujo normal del programa según se cumpla o no una determinada condición. Las estructuras de control selectivas que veremos son:
 
@@ -29,7 +33,7 @@ Estas estructuras de control permiten alterar el flujo normal del programa segú
 - `if...else if...else`
 - `switch`
 
-#### if
+### if
 
 La sentencia `if` evalúa la expresión dentro del paréntesis. Si la expresión es verdadera, se ejecutan las declaraciones dentro del cuerpo de `if`. Si la expresión es falsa, no se ejecutan.
 La expresión necesariamente tiene que ser una **expresión booleana**. Esto vale para cualquier expresión que deba ser evaluada por una estructura de control a excepción del `switch`, la cual mencionaremos más adelante.
@@ -51,7 +55,7 @@ if expresión:
    # acción/es
 ```
 
-#### if...else
+### if...else
 
 La sentencia `if` puede tener un bloque `else` opcional. En el caso de que la expresión del `if` evalúe como falsa, se ejecutará el bloque `else`. Sería el caso por defecto.
 
@@ -79,7 +83,7 @@ else:
     # acción/es
 ```
 
-#### Escalera if...else
+### Escalera if...else
 
 En ocasiones, vamos a necesitar evaluar más de uno o dos casos. Para eso esta la escalera `if...else`, que permite evaluar múltiples expresiones (cuantas queramos). A esta estructura también se la conoce como `if` múltiple.
 **Se ejecutará únicamente el bloque que evalúe la expresión como verdadera.** Esto quiere decir que, si alguna de las expresiones es verdadera, entonces se saltearan el resto de las evaluaciones que siguen, si las hay (recordar que el bloque `else` es opcional).
@@ -125,7 +129,7 @@ else:
     # acción/es
 ```
 
-#### if anidado
+### if anidado
 
 Es legal incluir dentro de cualquier bloque `if`, `else if` o `else` otra estructura de las vistas anteriormente. Veamos un ejemplo:
 
@@ -156,11 +160,12 @@ if expresión:
         acción/es
 ```
 
-#### switch...case
+### switch...case
 
 La estructura `switch case` nos permite ejecutar una acción o un bloque de código en base a distintas alternativas, llamadas **casos**. El valor de la variable a evaluar es comparado con los distintos casos, cuando el valor de la misma coincide con una de las **etiquetas** (valores posibles de la variable), se ejecuta el bloque de código después de la etiqueta coincidente. Si no hay coincidencia, se ejecuta la declaración por defecto.
 
 ```
+Pseudocódigo
 según(variable)
     caso etiqueta:
         acción/es
@@ -198,7 +203,7 @@ Qué debemos tener en cuenta a la hora de usar `switch case`:
 
 Se utiliza en lugar de una escalera `if else` cuando dicha estructura comienza a perder claridad al realizar reiteradamente la misma consulta. Por lo tanto, en ese caso, es mejor práctica usar `switch case` por una cuestión de legibilidad (en otras palabras, queda más limpio).
 
-### Estructuras de control iterativas
+## Estructuras de control iterativas
 Estas estructuras de control permiten repetir una acción o un bloque de código según se cumpla o no, o mientras se cumpla, una determinada condición. Las estructuras de control iterativas que veremos son:
 
 - `while`
@@ -207,7 +212,7 @@ Estas estructuras de control permiten repetir una acción o un bloque de código
 
 Con este tipo de estructuras hay que ser cuidadoso con los **bucles infinitos**. Esto ocurre cuando la condición que finalizaría el mismo, nunca deja de cumplirse. Se entenderá mejor luego de ver las distintas estructuras.
 
-#### while loop
+### while loop
 
 Esta estructura repite una acción o bloque de código **mientras** que el resultado de la evaluación de la expresión sea verdadero, la cual se realiza antes de la ejecución del bloque. Cuando la expresión resulte falsa, terminará la ejecución del bucle. 
 
@@ -245,13 +250,13 @@ while n < 10:
     n += 1
 ```
 
-#### do...while loop
+### do...while loop
 Esta estructura iterativa es similar a la anterior. La única diferencia es que la expresión la evalúa luego de ejecutar la acción o el bloque de código. Esto quiere decir que va a ejecutar la acción o el bloque **al menos una vez**, lo cual puede llegar a ser muy útil. A continuación, se muestra la sintaxis de esta estructura:
 ```
 Pseudocódigo
 repetir
     acción/es
-hasta(!expresión) 
+mientras(!expresión) 
 ```
 ```c
 // C, Java, C++
@@ -264,7 +269,7 @@ do {
 # No existe esta estructura en Python
 ```
 
-#### for loop
+### for loop
 Esta estructura de control **se utiliza cuando se conoce la cantidad de iteraciones previamente** y esta cantidad es un número finito de repeticiones.
 
 ```

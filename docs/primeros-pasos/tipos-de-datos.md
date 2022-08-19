@@ -1,26 +1,30 @@
-## Tipos de Datos
+---
+sidebar_position: 3
+---
+
+# Tipos de Datos
 
 Al solucionar un determinado problema mediante un algoritmo no es posible utilizar cualquier tipo de información. Es decir, no siempre se puede utilizar cualquier tipo de dato.
 
 Un tipo de dato se puede definir como **"Todos los valores posibles que una variable de ese tipo de dato puede tomar"**.
 
-### Clasificación
+## Clasificación
 
-#### Simples
+### Simples
 
 Estos a su vez se dividen en dos. 
 
-##### Ordinales
+#### Ordinales
 Aquellos cuyos valores poseen sucesor y antecesor.
 
 Por ejemplo, los números enteros, se sabe que el antecesor de 5 siempre será el 4 y el sucesor el 6.
 
-##### No Ordinales 
+#### No Ordinales 
 Aquellos que no se puede determinar un sucesor o antecesor.
 
 Por ejemplo, los números reales, no se puede representar en la computación el número que sucede al 0.
 
-#### Complejos (Estructurados)
+### Complejos (Estructurados)
 
 Estos se ven más adelante.
 

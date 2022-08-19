@@ -1,3 +1,9 @@
+---
+sidebar_position: 1
+---
+
+# Introducción
+
 ## Nociones básicas
 
 ### ¿Qué es un algoritmo?
@@ -39,7 +45,7 @@ Supongamos que tenemos el siguiente algoritmo:
 ¿Cuál sería su traducción en diferentes lenguajes de programación?
 
 - Assembly:
-    ```
+    ```nasm
     DOSSEG
     .MODEL TINY
     .DATA
@@ -74,6 +80,6 @@ Supongamos que tenemos el siguiente algoritmo:
     ```
 
 - Python:
-    ```
+    ```python
     print("Hola Mundo!")
     ```
