@@ -28,3 +28,4 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
+        cname: apuntes.algoritmos7540mendez.com.ar

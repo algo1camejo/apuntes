@@ -3,46 +3,50 @@ sidebar_position: 1
 slug: /
 ---
 
-# Tutorial Intro
+# Apuntes de Algoritmos y programación I (75.40)
 
-Let's discover **Docusaurus in less than 5 minutes**.
+* [Cómo contribuir](#cómo-contribuir)
+    - [Avisar de un error](#avisar-de-un-error)
+    - [Proponer un cambio](#proponer-un-cambio)
+* [Cómo realizar cambios a la wiki](#cómo-realizar-cambios-a-la-wiki)
+    - [Instalación del entorno](#instalación-del-entorno)
+    - [Servidor de desarrollo local](#servidor-de-desarrollo-local)
 
-## Getting Started
+## Cómo contribuir
 
-Get started by **creating a new site**.
+Si creés que el apunte tiene un error, podés avisarnos para que lo revisemos o, si te animás, corregirlo vos mismo y enviarnos los cambios que propongas.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Avisar de un error
 
-### What you'll need
+1. En la pestaña [Issues](https://github.com/algo1camejo/apuntes/issues) del repositorio de Github crear uno nuevo.
+2. Seleccionar el template "Error en el apunte" y completar los datos que se piden. Ser lo más claro posible.
+3. Poner un título descriptivo y enviar. En cuanto se pueda se revisará y se tratará de corregir.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Proponer un cambio
 
-## Generate a new site
+1. Clonar el repositorio.
+2. Crear una nueva rama con el nombre `correccion/tu-correccion`, siendo `tu-correccion` algún nombre que describa el cambio que vas a hacer.
+3. Realizar los cambios que se deseen \(ver [Cómo realizar cambios a la wiki](#cómo-realizar-cambios-a-la-wiki)\).
+4. Cuando los cambios estén listos, crear un Pull Request y esperar la devolución de un miembro del equipo.
 
-Generate a new Docusaurus site using the **classic template**.
+En este [enlace](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.es.md) podés encontrar un instructivo más detallado sobre cómo realizar este proceso.
 
-The classic template will automatically be added to your project after you run the command:
+## Cómo realizar cambios a la wiki
+
+Los archivos de la documentación se encuentran en `/docs/` organizados en carpetas por capítulos.
+
+### Instalación del entorno
+
+Al descargar el repo por primera vez (e incluso se recomienda después de un _pull_), es necesario instalar las dependencias. Para hacer esto es requisito contar con [Node.js](https://nodejs.dev/) instalado.
 
 ```bash
-npm init docusaurus@latest my-website classic
+npm install
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Servidor de desarrollo local
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+Para visualizar los cambios realizados, correr el siguiente comando para iniciar un servidor de desarrollo local. La mayoría de los cambios se verán reflejados sin necesidad de reiniciar el servidor.
 
 ```bash
-cd my-website
 npm run start
 ```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
