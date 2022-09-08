@@ -76,7 +76,23 @@ double	raiz, importe;
 ```
 
 ### Constantes
-...
+Las constantes son un tipo especial de variables que guardan un valor que no puede ser modificado. Se declaran inmediatamente abajo de los ```#include```, y su nombre son en mayúsculas. 
+Por ejemplo:
+```c
+#include <stdio.h>
+
+const int MAYOR_DE_EDAD=18;
+
+int main(){
+    int edad = 4;
+    if(edad>= MAYOR_DE_EDAD)
+        printf("Es mayor de edad!");
+    else
+        printf("No es mayor de edad");
+
+    return 0;
+}
+```
 
 ### Comentarios
 Los caracteres /* se emplean para iniciar un comentario  introducido entre el código del programa; el comentario termina con los caracteres */.

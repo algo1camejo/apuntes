@@ -333,3 +333,83 @@ do{
     accionj;
 } while (!expresion);
 ```
+
+### for
+Esta estructura de control se utiliza cuando se conoce la cantidad de iteraciones previamente y esta cantidad es un número finito de repeticiones (iteración definida).
+Ejemplo del uso de la estructura de control **for** de una sola acción:
+
+```
+Para variable <- expresion1 hasta  expresion2  Hacer accion;
+```
+Lo que en C se traduce como: 
+```c
+for (expresion1 ;  expresion2 ;  expresion3 )  accion;
+```
+
+Ejemplo del uso de la estructura de control **for** repitiendo un bloque de acciones:
+
+```
+Para Contador <- expresion1 hasta  expresion2  Hacer
+Inicion
+    accion1;
+    accion2;
+    ...
+    accionj;
+Fin
+```
+Y en C: 
+```c
+for (expresion1 ;  expresion2 ;  expresion3 ) {
+    accion1;
+    accion2;
+    ...
+    accionj;
+}
+```
+
+Dado que la estructura de control for puede parecer compleja a continuación se propone un pequeño ejemplo;
+
+```c
+/*En el siguiente código se van a realizar las dos acciones de suma iniciando con el contador igual a 1 hasta que contador valga 8*/
+for (int contador = 1;  contador <=8; contador++) {
+    suma = suma + contador ;
+    tolal= total + suma ;
+}
+```
+
+Cada una de las tres expresiones que intervienen en el for tienen un propósito bien específico:
+* La expresion1 se encarga de definir cuál es la variable de control del ciclo y el valor inicial de la misma (en el ejemplo anterior ```int contador = 1```).
+* La expresion2 define cuál será la condición del corte del ciclo (```contador <=8```). Como es una condición, esta tiene que ser una expresión booleana.
+* La expresion3 define cómo se incrementa la variable de control (```contador++```).
+
+Otro ejemplo más de una iteración escrita con un for:
+
+```c
+/*Suma una variable a si misma una cantidad de veces determinada*/
+#include<stdio.h>
+
+int main(){
+	int cantidad_de_sumas=10;
+	int mi_numero=1;
+
+	for(int i=0; i<=cantidad_de_sumas;i= i+1){
+		mi_numero=mi_numero + mi_numero;
+	}
+	
+	return 0;
+}
+```
+
+Es interesante destacar que la estructura de control **for** es totalmente equivalente a la siguiente construcción utilizando la estructura de control **while**:
+
+```
+for (expresion1 ;  expresion2 ;  expresion3 )  accion;
+```
+
+```
+expresion1;
+while (expresion2){
+    accion;
+    expresion3;
+}
+```
