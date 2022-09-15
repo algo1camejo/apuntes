@@ -16,13 +16,13 @@ Cabe recordar que las acciones se delimitan con el caracter ";". En el lenguaje 
 // el caracter } marca el fin del bloque
 ```
 
-### Estructuras de control selectivas
+## Estructuras de control selectivas
 Estas estructuras de control permiten alterar el flujo normal del programa según se cumpla o no una determinada condición.
 Esta condición está contenida en la expresión que está entre paréntesis.
 El resultado de evaluar esta expresión puede ser _true_(verdadero) o _false_ (falso).
 En C el valor _true_ está representado por un valor distinto de cero y _false_ corresponde al 0.
 
-#### if simple:
+### if simple
 Esta estructura nos permite ejecutar un bloque de acción si la condición dentro del if se cumple. En pseudocódigo sería así:
 ```
 si (expresion) entonces  accion;
@@ -62,7 +62,7 @@ if(contador == 3){
 ``` 
 En el código anterior, la condición que se tiene que cumplir para que se ejecuten las acciones entre las llaves es que el valor que guarda la variable contador sea igual a 3. Si se cumple esta condición, se imprimer el mensaje por pantalla y se le suma uno al valor del contador.
 
-#### if - else
+### if - else
 Esta estructura nos permite controlar el flujo del programa para que se ejecuten unas u otras acciones dependiendo en una condición.
 ```
 si (expresion) entonces
@@ -127,7 +127,7 @@ else {
 En el ejemplo anterior, si la variable ```terminó``` tiene el valor true, (sería lop mismo que poner ```termino == true```), al contador se le asigna el valor 5. Por el contrario, si ```termino``` no es true, a la variable contador se le asignará el valor 3.
 
 
-#### if - else if
+### if - else if
 
 La construcción de esta forma de la estructura de control si (if) se la denomina si múltiple (if múltiple) o si anidados;
 ```

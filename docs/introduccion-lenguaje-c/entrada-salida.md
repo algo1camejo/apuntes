@@ -1,11 +1,11 @@
-
 # Entrada y salida de datos
+
 Normalmente en pseudocódigo se utilizan dos acciones: una para la lectura de valores desde algún dispositivo de entrada y otra para la escritura de valores en algún dispositivo de salida.
 A continuación veremos los equivalentes en C.
-Para poder utilizar estas funciones se debe hacer referencia en el programa a la biblioteca estándar ```stdio.h```.
-Esto se realiza mediante la directiva ```\#include <stdio.h>```.
+Para poder utilizar estas funciones se debe hacer referencia en el programa a la biblioteca estándar `stdio.h`.
+Esto se realiza mediante la directiva `#include <stdio.h>`.
 
-## Salida de datos: ```printf()```
+## Salida de datos: `printf()`
 Esta función se utiliza para realizar operaciones de salida.
 La misma recibe una cadena que determina el formato y una lista de variables o expresiones:
 
@@ -42,17 +42,18 @@ Formateador |Salida
 %c	| caracter (char)                                                          
 %s	| cadena de caracteres (string)                                                        
 
-## Entrada de datos: ```scanf()``
+## Entrada de datos: `scanf()`
+
 De la misma forma que en pseudocódigo es posible asignarle un valor a una variable desde un dispositivo de entrada (teclado, por ejemplo) en C también lo es.
-Para ello se utiliza la función ```scanf()```. Al igual que ```printf()```. la misma recibe una cadena de control y una lista de variables o expresiones:
+Para ello se utiliza la función `scanf()`. Al igual que `printf()`, la misma recibe una cadena de control y una lista de variables o expresiones:
 ```c
 	scanf (const char* formato, ... );
 ```
 
 La cadena control o formato provee una descripción del formato de entrada de los datos.
 A este formato serán convertidos los datos ingresados en el dispositivo de entrada.
-Estos caracteres de especificación de formato se obtienen con marcadores determinados por caracteres de escape ```%```.
-Dichos especificadores de formato se asignan seg�n su localización relativa.
+Estos caracteres de especificación de formato se obtienen con marcadores determinados por caracteres de escape `%`.
+Dichos especificadores de formato se asignan según su localización relativa.
 La lista de variables o expresiones proporcionan los valores a escribir, teniendo en cuenta su orden relativo:
 
 ```c
@@ -72,16 +73,16 @@ int main() {
 }
 ```
 
-Para poder hacer que este funcione en nuestra computadora se lo guardar como ```primerprograma.c```.
+Para poder hacer que este funcione en nuestra computadora se lo guarda como `primerprograma.c`.
 Para que dicho programa pueda ser ejecutado, en primer lugar debe ser compilado, para lo que se utilizará el compilador de C.
 Desde el directorio en el que fue guardado el archivo se ejecutará por linea de comandos:
 
 ```gcc primer_programa.c```
 
-Esto debería generar un nuevo archivo llamado ```a.out```.
-Para verificar que se haya creado, se inspeccionan los contenidos del directorio mediante ```ls```. Esto debería mostrar por pantalla que existen tanto ```primer_programa.c``` como ```a.out``` (el ejecutable).
+Esto debería generar un nuevo archivo llamado `a.out`.
+Para verificar que se haya creado, se inspeccionan los contenidos del directorio mediante `ls`. Esto debería mostrar por pantalla que existen tanto `primer_programa.c` como `a.out` (el ejecutable).
 
-Para que el programa ejecutable tenga un nombre en especial en lugar de ```a.out``` se debe compilar de la siguiente forma: 
+Para que el programa ejecutable tenga un nombre en especial en lugar de `a.out` se debe compilar de la siguiente forma: 
 ```gcc primer_programa.c -o primer_programa```
 
-Para ejecutar el programa recién creado, lo invocamos con ./primer_programa.
+Para ejecutar el programa recién creado, lo invocamos con `./primer_programa`.

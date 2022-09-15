@@ -1,12 +1,10 @@
-
-
 # Tipos básicos de datos
 El lenguaje C provee varios tipos básicos de datos, la mayoría de estos están formados por uno de los cuatro especificadores de tipos aritméticos básicos del lenguaje C (char, int, float y double).
 
 ### Tipo char
 Las variables caracter (tipo char) contienen un único caracter y se almacenan en un byte de memoria (8 bits). Como se vió el byte es una unidad de medida correspondiente a 8 bits, un bit (Binary Digit) es la mínima unidad de medida de la información.
 
-La cantidad de combinaciones posibles que se pueden obtener con j bits está dada por la fórmula  $2^{j}$, por ende con un byte se pueden obtener $2^{8}$ combinaciones, es decir, 256 valores posibles.
+La cantidad de combinaciones posibles que se pueden obtener con j bits está dada por la fórmula  2<sup>j</sup>, por ende con un byte se pueden obtener 2<sup>8</sup> combinaciones, es decir, 256 valores posibles.
 
 ### Tipo de dato entero
 En este caso veremos los tipos de datos que surgen del especificador de tipo aritmético básico int y también de la combinación de especificadores opcionales (signed, unsigned, short, long).

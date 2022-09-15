@@ -27,7 +27,7 @@ Una pequeña explicación de qué es cada una de las cosas que se ven en el prog
  ```c 
   #include <stdio.h> 
   ```
-   Es la directiva de preprocesador necesaria para poder usar ```printf()```.
+   Es la directiva de preprocesador necesaria para poder usar `printf()`.
 	En pseudocódigo se omite la inclusión de bibliotecas por simplicidad, y por ese mismo motivo se usa escribir() en vez de las complejas funciones de entrada/salida de C.
 ```c
 int main()
@@ -44,7 +44,7 @@ Ordena que el programa termine su ejecución y devuelva 0 al contexto en el que 
 
 
 ### Variables
-Para definir una variable en C se debe establecer el tipo de dato al cual pertenece, para ello se utiliza cualquiera de los especificadores de tipos de las tablas de la sección anterior. Seguidamente se debe dotar de un nombre a la variable, a ese nombre se lo denomina **identificador**. Un identificador se lo escribe teniendo en cuenta que es una secuencia de letras (letras minúsculas, letras mayúsculas, y el caracter ``\_'' es considerado una letra) y dígitos.} 
+Para definir una variable en C se debe establecer el tipo de dato al cual pertenece, para ello se utiliza cualquiera de los especificadores de tipos de las tablas de la sección anterior. Seguidamente se debe dotar de un nombre a la variable, a ese nombre se lo denomina **identificador**. Un identificador se lo escribe teniendo en cuenta que es una secuencia de letras (letras minúsculas, letras mayúsculas, y el caracter ''\_'' es considerado una letra) y dígitos.
 Es importante recalcar que la primera letra de un identificador no puede ser un dígito numérico (0,1,2,3,4,5,6,7,8,9). La declaraciún se termina con un caracter '';''. Se hace distinción entre letras mayúsculas y minúsculas. Así, Casa es considerado como un identificador distinto de casa y de CASA.
 Ejemplos de declaración de variables: 
 
@@ -55,17 +55,17 @@ float    raiz;
 ```
 
 Otros ejemplos de identificadores válidos son los siguientes:
-```tiempo```, ```distancia1```, ```caso_A```, ```PI```, ```velocidad_de_la_luz```
+`tiempo`, `distancia1`, `caso_A`, `PI`, `velocidad_de_la_luz`
 Por el contrario, los siguientes nombres no son válidos (¿Por qué?):
 
-```1_valor```, ```tiempo-total```, ```dolare$```, ```%final```.
+`1_valor`, `tiempo-total`, `dolare$`, `%final`.
 
 Cuando se desea realizar más de una declaración de variables del mismo tipo de dato son equivalentes:
 
 ```c
 int	numero;
 int	contador;
-int	cantidadDePasos;
+int	cantidad_de_pasos;
 double	raiz;
 double 	importe;
 ```
@@ -76,7 +76,7 @@ double	raiz, importe;
 ```
 
 ### Constantes
-Las constantes son un tipo especial de variables que guardan un valor que no puede ser modificado. Se declaran inmediatamente abajo de los ```#include```, y su nombre son en mayúsculas. 
+Las constantes son un tipo especial de variables que guardan un valor que no puede ser modificado. Se declaran inmediatamente abajo de los ```#include```, y sus nombres son en mayúsculas. 
 Por ejemplo:
 ```c
 #include <stdio.h>
@@ -95,9 +95,9 @@ int main(){
 ```
 
 ### Comentarios
-Los caracteres /* se emplean para iniciar un comentario  introducido entre el código del programa; el comentario termina con los caracteres */.
+Los caracteres /\* se emplean para iniciar un comentario  introducido entre el código del programa; el comentario termina con los caracteres \*/.
 No se puede introducir un comentario dentro de otro.
-Todo texto introducido entre los símbolos de comienzo /* y final*/ de comentario son siempre ignorados por el compilador.
+Todo texto introducido entre los símbolos de comienzo /\* y final\*/ de comentario son siempre ignorados por el compilador.
 Por ejemplo:
 
 ```c
