@@ -60,7 +60,7 @@ if(contador == 3){
     contador ++; 
 }
 ``` 
-En el código anterior, la condición que se tiene que cumplir para que se ejecuten las acciones entre las llaves es que el valor que guarda la variable contador sea igual a 3. Si se cumple esta condición, se imprimer el mensaje por pantalla y se le suma uno al valor del contador.
+En el código anterior, la condición que se tiene que cumplir para que se ejecuten las acciones entre las llaves es que el valor que guarda la variable contador sea igual a 3. Si se cumple esta condición, se imprime el mensaje por pantalla y se le suma uno al valor del contador.
 
 ### if - else
 Esta estructura nos permite controlar el flujo del programa para que se ejecuten unas u otras acciones dependiendo en una condición.
