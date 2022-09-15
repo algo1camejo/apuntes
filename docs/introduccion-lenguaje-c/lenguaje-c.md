@@ -71,8 +71,8 @@ double 	importe;
 ```
 
 ```c
-int	    numero, contador,cantidadDePasos;
-double	raiz, importe;
+int numero, contador, cantidad_de_pasos;
+double raiz, importe;
 ```
 
 ### Constantes
