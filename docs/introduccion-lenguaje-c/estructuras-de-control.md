@@ -124,7 +124,7 @@ else {
     contador = 3;
 }
 ```
-En el ejemplo anterior, si la variable ```terminó``` tiene el valor true, (sería lop mismo que poner ```termino == true```), al contador se le asigna el valor 5. Por el contrario, si ```termino``` no es true, a la variable contador se le asignará el valor 3.
+En el ejemplo anterior, si la variable ```terminó``` tiene el valor true, (sería lo mismo que poner ```termino == true```), al contador se le asigna el valor 5. Por el contrario, si ```termino``` no es true, a la variable contador se le asignará el valor 3.
 
 
 ### if - else if
